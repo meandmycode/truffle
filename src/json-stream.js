@@ -1,3 +1,5 @@
+export const PARSE_LINE_ERROR = 'PARSE_LINE_ERROR';
+
 /**
  * Parses a given string of newline deliminated JSON items and return an array of all items.
  * @param {string} str The newline deliminated JSON to parse from.
@@ -20,9 +22,23 @@ export function parse(str) {
     // line numbers off when reporting errors
     if (line === '') return items;
 
-    const item = JSON.parse(line);
+    try {
 
-    return [...items, item];
+      const item = JSON.parse(line);
+
+      return [...items, item];
+
+    } catch (err) {
+
+      // if we encounter an error parsing then we should try and make
+      // debugging easier by including the line number and source.
+      const error = new Error(`${err.message} line ${i}`);
+      error.code = PARSE_LINE_ERROR;
+      error.line = i;
+      error.source = line;
+
+      throw error;
+    }
 
   }, []);
 
