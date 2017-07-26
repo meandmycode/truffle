@@ -14,7 +14,8 @@
   "scripts": {
     "test": "npm run lint && npm run unit",
     "lint": "npx eslint .",
-    "unit": "npx nyc npx ava"
+    "unit": "npx nyc npx ava",
+    "interfeast": "npx babel-node ./bin/interfeast.js"
   },
   "ava": {
     "require": "babel-register",
@@ -30,5 +31,8 @@
     "babel-preset-env": "^1.6.0",
     "eslint": "^4.3.0",
     "nyc": "^11.0.3"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
   }
 }
