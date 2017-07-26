@@ -6,7 +6,7 @@ Doing craaaaazy things with latitudes and longitudes.
 [Node.js v8.1.0+](https://nodejs.org)
 
 ## Technology stack
-** 🦄 [Babel](https://babeljs.io/) 🚨 [AVA](https://github.com/avajs/ava) 🗽 [NYC](https://github.com/istanbuljs/nyc) **
+**🦄 [Babel](https://babeljs.io/) 🚨 [AVA](https://github.com/avajs/ava) 🗽 [NYC](https://github.com/istanbuljs/nyc)**
 
 ## Setup
 
