@@ -1,2 +1,3 @@
+import * as JsonStream from "./json-stream";
 import getDistance from "./haversine";
-export { getDistance };
+export { getDistance, JsonStream };
